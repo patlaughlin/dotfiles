@@ -20,6 +20,8 @@ exec --no-startup-id feh --bg-scale ~/backgrounds/nice-blue-background.png
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id xrandr --output DisplayPort-1 --mode 1920x1080 --pos 0x0 --rotate normal --output DisplayPort-0 --primary --mode 2560x1440 --pos 1920x0 --rotate normal
 exec --no-startup-id xinput set-prop 10 "libinput Natural Scrolling Enabled" 1
+exec --no-startup-id xset r rate 200 35
+
 exec_always --no-startup-id xmodmap ~/.Xmodmap
 
 # kill any hanging polybar processes
@@ -71,7 +73,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
