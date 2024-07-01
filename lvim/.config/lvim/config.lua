@@ -14,95 +14,47 @@
 
 lvim.plugins = {
   {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup({})
-    end
+    "github/copilot.vim",
+    event = "InsertEnter"
   },
   {
-    "zbirenbaum/copilot-cmp",
-    config = function()
-      require("copilot_cmp").setup({
-        suggestion = { enabled = false },
-        panel = { enabled = false }
-      })
-    end
-  },
-  {
-    "akinsho/flutter-tools.nvim",
+    "CopilotC-Nvim/CopilotChat.nvim",
+    branch = "canary",
     dependencies = {
-      "nvim-lua/plenary.nvim",
-      "stevearc/dressing.nvim",
+      { "github/copilot.vim" },    -- or github/copilot.vim
+      { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
     },
-    config = function()
-      require("flutter-tools").setup {
-        flutter_path = "/home/plaugh/fvm/default/bin/flutter",
-        ui = {
-          border = "rounded",
-          notification_style = "plugin",
-        }, debugger = {
-        enabled = true,
-        run_via_dap = true,
-        register_configurations = function(_)
-          require("dap").configurations.dart = {}
-          require("dap.ext.vscode").load_launchjs()
-        end,
-      },
-        dev_log = {
-          enabled = true,
-          open_cmd = "tabedit",
-        },
-        widget_guides = {
-          enabled = true,
-          debug = true,
-        },
-        lsp = {
-          color = {
-            enabled = true,
-            background = false,
-            background_color = { r = 220, g = 223, b = 228 },
-            foreground = false,
-            virtual_text = true,
-            virtual_text_str = '■',
-          },
-          settings = {
-            showTodos = true,
-            completeFunctionCalls = true,
-            renameFilesWithClasses = "prompt",
-            enableSnippets = true,
-            enableSdkFormatter = true,
-          },
-          capabilities = require("cmp_nvim_lsp").default_capabilities(),
-        }
-      }
-    end,
-  }
+    opts = {
+      debug = true, -- Enable debugging
+      -- See Configuration section for rest
+    },
+    -- See Commands section for default commands if you want to lazy load on them
+  },
 }
 
--- Below config is required to prevent copilot overriding Tab with a suggestion
--- when you're just trying to indent!
-local has_words_before = function()
-  if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
-  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-  return col ~= 0 and vim.api.nvim_buf_get_text(0, line - 1, 0, line - 1, col, {})[1]:match("^%s*$") == nil
-end
-local on_tab = vim.schedule_wrap(function(fallback)
-  local cmp = require("cmp")
-  if cmp.visible() and has_words_before() then
-    cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
-  else
-    fallback()
-  end
-end)
-lvim.builtin.cmp.mapping["<Tab>"] = on_tab
+-- -- Below config is required to prevent copilot overriding Tab with a suggestion
+-- -- when you're just trying to indent!
+-- local has_words_before = function()
+--   if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
+--   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+--   return col ~= 0 and vim.api.nvim_buf_get_text(0, line - 1, 0, line - 1, col, {})[1]:match("^%s*$") == nil
+-- end
+-- local on_tab = vim.schedule_wrap(function(fallback)
+--   local cmp = require("cmp")
+--   if cmp.visible() and has_words_before() then
+--     cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+--   else
+--     fallback()
+--   end
+-- end)
+-- lvim.builtin.cmp.mapping["<Tab>"] = on_tab
 
 
 lvim.format_on_save.enabled = true
 lvim.keys.normal_mode["<leader>fr"] = ":FlutterRun<CR>"
 lvim.keys.normal_mode["<leader>fq"] = ":FlutterQuit<CR>"
 lvim.keys.normal_mode["<leader>fR"] = ":FlutterRestart<CR>"
+-- lvim.keys.normal_mode["<leader>ccp"] = ":CopilotChatToggle<CR>"
 
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "dartls" })
 lvim.format_on_save.pattern = { "*.dart", "*.lua", "*.ts", "*.js", "*.kt" }
