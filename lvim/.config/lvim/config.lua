@@ -13,6 +13,7 @@
 -- }
 
 lvim.plugins = {
+  { "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
   {
     "github/copilot.vim",
     event = "InsertEnter"
@@ -58,3 +59,4 @@ lvim.keys.normal_mode["<leader>fR"] = ":FlutterRestart<CR>"
 
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "dartls" })
 lvim.format_on_save.pattern = { "*.dart", "*.lua", "*.ts", "*.js", "*.kt" }
+lvim.colorscheme = "gruvbox"
