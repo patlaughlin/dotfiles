@@ -55,7 +55,7 @@ lvim.format_on_save.enabled = true
 lvim.keys.normal_mode["<leader>fr"] = ":FlutterRun<CR>"
 lvim.keys.normal_mode["<leader>fq"] = ":FlutterQuit<CR>"
 lvim.keys.normal_mode["<leader>fR"] = ":FlutterRestart<CR>"
--- lvim.keys.normal_mode["<leader>ccp"] = ":CopilotChatToggle<CR>"
+lvim.keys.normal_mode["<leader>gh"] = ":CopilotChatToggle<CR>"
 
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "dartls" })
 lvim.format_on_save.pattern = { "*.dart", "*.lua", "*.ts", "*.js", "*.kt" }
