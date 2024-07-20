@@ -14,19 +14,28 @@ for_window [class="^.*"] border pixel 1
 # set $mod Mod4
 set $mod Mod1
 
-exec --no-startup-id redshift
+exec --no-startup-id redshift -l 34.073662:-84.677101 -t 5700:3600
+exec --no-startup-id blueman-applet
 exec_always --no-startup-id picom
-exec_always --no-startup-id feh --bg-scale ~/.dotfiles/backgrounds/nice-blue-background.png
+exec_always --no-startup-id feh --bg-scale ~/dotfiles/backgrounds/nice-blue-background.png
 # exec_always --no-startup-id xrdb -merge ~/.Xresources
-exec_always --no-startup-id xrandr --output DisplayPort-1 --mode 1920x1080 --pos 0x0 --rotate normal --output DisplayPort-0 --primary --mode 2560x1440 --rate 144 --pos 1920x0 --rotate normal
+# exec_always --no-startup-id xrandr --output DisplayPort-1 --mode 1920x1080 --pos 0x0 --rotate normal --output DisplayPort-0 --primary --mode 2560x1440 --rate 144 --pos 1920x0 --rotate normal
 # exec_always --no-startup-id xrandr DisplayPort-0 --primary --mode 2560x1440 --rate 144
-# exec_always --no-startup-id xinput set-prop 10 "libinput Natural Scrolling Enabled" 1
+exec_always --no-startup-id xinput set-prop 11 "libinput Natural Scrolling Enabled" 1
+exec_always --no-startup-id xinput set-prop 11 "libinput Accel Speed" 0.75
+exec_always --no-startup-id xinput set-prop 11 "libinput Tapping Enabled" 1
 exec --no-startup-id xset r rate 200 35
 
 exec_always --no-startup-id xmodmap ~/.Xmodmap
 
-# kill any hanging polybar processes
-exec_always killall polybar
+# # Increase brightness
+# exec_always bindsym F7 exec brightnessctl set +5%
+
+# # Decrease brightness
+# exec_always bindsym F8 exec brightnessctl set 5%-
+
+exec_always --no-startup-id xsettingsd
+
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 
 bindsym Print exec maim "/home/$USER/Pictures/$(date).jpg"
@@ -69,6 +78,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

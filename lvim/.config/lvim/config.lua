@@ -47,8 +47,22 @@ lvim.plugins = {
       'stevearc/dressing.nvim', -- optional for vim.ui.select
     },
     config = true,
+    lsp = {
+      on_attach = require("lvim.lsp").common_on_attach,
+      capabilities = require("lvim.lsp").common_capabilities,
+    },
   },
 }
+
+-- require("lspconfig").dartls.setup {
+--   on_attach = require("lvim.lsp").common_on_attach,
+--   capabilities = require("lvim.lsp").common_capabilities,
+-- }
+
+vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })
+require('telescope').load_extension('flutter')
 
 -- vim.g.copilot_no_tab_map = true
 -- vim.g.copilot_assume_mapped = true

@@ -3,8 +3,9 @@
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="$PATH:$HOME/fvm/default/bin"
-export PATH="$PATH:$HOME/fvm/default/bin/cache/dart-sdk/bin"
+export PATH="$PATH:$HOME/.fvm/versions/3.22.3/bin/dart"
+export PATH="$PATH:$HOME/.fvm/versions/3.22.3/bin/flutter"
+export PATH="$PATH":":$HOME/.fvm/flutter_sdk/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64"
