@@ -8,7 +8,9 @@ export PATH="$PATH:$HOME/.fvm/versions/3.22.3/bin/flutter"
 export PATH="$PATH":":$HOME/.fvm/flutter_sdk/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
-export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64"
+# export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64"
+export JAVA_HOME="/snap/android-studio/current/jbr"
+export PATH="$JAVA_HOME/bin:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -128,3 +130,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Turso
 export PATH="/home/plaugh/.turso:$PATH"
+export CAPACITOR_ANDROID_STUDIO_PATH="/snap/bin/android-studio"

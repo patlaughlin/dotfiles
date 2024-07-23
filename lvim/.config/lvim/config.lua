@@ -26,19 +26,19 @@ lvim.plugins = {
   --   "github/copilot.vim",
   --   event = "InsertEnter"
   -- },
-  {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    branch = "canary",
-    dependencies = {
-      { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
-      { "github/copilot.vim" },    -- or github/copilot.vim
-    },
-    opts = {
-      -- See Configuration section for rest
-      debug = true, -- Enable debugging
-    },
-    -- See Commands section for default commands if you want to lazy load on them
-  },
+  -- {
+  --   "CopilotC-Nvim/CopilotChat.nvim",
+  --   branch = "canary",
+  --   dependencies = {
+  --     { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+  --     { "github/copilot.vim" },    -- or github/copilot.vim
+  --   },
+  --   opts = {
+  --     -- See Configuration section for rest
+  --     debug = true, -- Enable debugging
+  --   },
+  --   -- See Commands section for default commands if you want to lazy load on them
+  -- },
   {
     lazy = false,
     'akinsho/flutter-tools.nvim',

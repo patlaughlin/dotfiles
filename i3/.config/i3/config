@@ -23,6 +23,7 @@ exec_always --no-startup-id picom
 exec_always --no-startup-id feh --bg-scale ~/dotfiles/backgrounds/nice-blue-background.png
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id xrandr --output DP-0 --primary --mode 3440x1440 --rate 144 --pos 0x0 --output eDP-1-1 --mode 2560x1600 --pos -3440x0
+# exec_always --no-startup-id xrandr --output DP-0 --primary --mode 3440x1440 --rate 144 --pos 0x0 --output eDP-1-1 --mode 2560x1600
 exec_always --no-startup-id xinput set-prop 11 "libinput Natural Scrolling Enabled" 1
 exec_always --no-startup-id xinput set-prop 11 "libinput Accel Speed" 0.75
 exec_always --no-startup-id xinput set-prop 11 "libinput Tapping Enabled" 1
