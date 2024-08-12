@@ -11,6 +11,8 @@ export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 # export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64"
 export JAVA_HOME="/snap/android-studio/current/jbr"
 export PATH="$JAVA_HOME/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
