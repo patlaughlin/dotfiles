@@ -133,3 +133,7 @@ export NVM_DIR="$HOME/.nvm"
 # Turso
 export PATH="/home/plaugh/.turso:$PATH"
 export CAPACITOR_ANDROID_STUDIO_PATH="/snap/bin/android-studio"
+export PATH="$HOME/.local/bin:$PATH"
+export ANDROID_HOME="/home/plaugh/Android/Sdk"
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools"
+export PATH="$PATH":"$HOME/fvm/default/bin"
