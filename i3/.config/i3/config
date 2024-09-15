@@ -18,7 +18,6 @@ exec --no-startup-id eval "$(ssh-agent -s)"
 exec --no-startup-id ssh-add ~/.ssh/id_ed25519
 
 exec --no-startup-id redshift -l 34.073662:-84.677101 -t 5700:3600
-exec --no-startup-id blueman-applet
 exec_always --no-startup-id picom
 exec_always --no-startup-id feh --bg-scale ~/dotfiles/backgrounds/nice-blue-background.png
 exec_always --no-startup-id xrdb -merge ~/.Xresources
@@ -29,7 +28,7 @@ exec_always --no-startup-id xset r rate 200 35
 
 exec_always --no-startup-id xmodmap ~/.Xmodmap
 
-exec_always --no-startup-id ~/dotfiles/screenlayout/.screenlayout/setup_displays.sh
+exec --no-startup-id ~/dotfiles/screenlayout/.screenlayout/setup_displays.sh
 
 # # Increase brightness
 # exec_always bindsym F7 exec brightnessctl set +5%
