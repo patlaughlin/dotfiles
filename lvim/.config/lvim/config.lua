@@ -109,7 +109,7 @@ vim.cmd [[
 
 -- flutter-tools configuration
 require('flutter-tools').setup {
-  flutter_path = "/home/plaugh/.fvm/flutter_sdk/bin/flutter",
+  flutter_path = "/home/plaugh/fvm/default/bin/flutter",
   ui = {
     border = "rounded",
     notification_style = "plugin",
