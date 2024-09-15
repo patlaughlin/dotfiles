@@ -98,7 +98,7 @@ lvim.keys.normal_mode["<leader>gh"] = ":CopilotChatToggle<CR>"
 
 -- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "dartls" })
 lvim.format_on_save.pattern = { "*.dart", "*.lua", "*.ts", "*.js", "*.kt", "*.py", "*.tsx", "*.jsx" }
-lvim.colorscheme = "gruvbox"
+lvim.colorscheme = "catppuccin"
 vim.diagnostic.config({
   virtual_text = false,
 })
