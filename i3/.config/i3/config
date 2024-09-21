@@ -28,7 +28,7 @@ exec_always --no-startup-id xset r rate 200 35
 
 exec_always --no-startup-id xmodmap ~/.Xmodmap
 
-exec --no-startup-id ~/dotfiles/screenlayout/.screenlayout/setup_displays.sh
+exec_always --no-startup-id ~/dotfiles/screenlayout/.screenlayout/setup_displays.sh
 
 # # Increase brightness
 # exec_always bindsym F7 exec brightnessctl set +5%

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Identify the laptop display
-LAPTOP="eDP-1-0"
+LAPTOP="eDP-1-1"
 
 # List of possible ultrawide monitors (DisplayPort outputs)
 ULTRAWIDE_PORTS=("DP-0" "DP-1" "DP-2" "DP-3")

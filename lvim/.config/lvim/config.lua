@@ -91,10 +91,12 @@ vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap 
 -- vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 --
 lvim.format_on_save.enabled = true
-lvim.keys.normal_mode["<leader>fr"] = ":FlutterRun<CR>"
-lvim.keys.normal_mode["<leader>fq"] = ":FlutterQuit<CR>"
-lvim.keys.normal_mode["<leader>fR"] = ":FlutterRestart<CR>"
+lvim.keys.normal_mode["<leader>hs"] = ":FlutterRun<CR>"
+lvim.keys.normal_mode["<leader>hq"] = ":FlutterQuit<CR>"
+lvim.keys.normal_mode["<leader>hr"] = ":FlutterReload<CR>"
+lvim.keys.normal_mode["<leader>hR"] = ":FlutterRestart<CR>"
 lvim.keys.normal_mode["<leader>gh"] = ":CopilotChatToggle<CR>"
+-- vim.api.nvim_set_keymap('n', '<leader>hr', '<Cmd>lua require("flutter-tools").hotreload()<CR>', { noremap = true, silent = true })
 
 -- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "dartls" })
 lvim.format_on_save.pattern = { "*.dart", "*.lua", "*.ts", "*.js", "*.kt", "*.py", "*.tsx", "*.jsx" }
@@ -164,20 +166,20 @@ require('flutter-tools').setup {
 }
 
 -- nvim-dap configuration
-local dap = require('dap')
-local dapui = require("dapui")
+-- local dap = require('dap')
+-- local dapui = require("dapui")
 
-dapui.setup()
+-- dapui.setup()
 
-dap.listeners.after.event_initialized["dapui_config"] = function()
-  dapui.open()
-end
-dap.listeners.before.event_terminated["dapui_config"] = function()
-  dapui.close()
-end
-dap.listeners.before.event_exited["dapui_config"] = function()
-  dapui.close()
-end
+-- dap.listeners.after.event_initialized["dapui_config"] = function()
+--   dapui.open()
+-- end
+-- dap.listeners.before.event_terminated["dapui_config"] = function()
+--   dapui.close()
+-- end
+-- dap.listeners.before.event_exited["dapui_config"] = function()
+--   dapui.close()
+-- end
 
 
 -- Add this to your LazyVim key mappings configuration file (e.g., keymaps.lua)
@@ -206,3 +208,5 @@ lvim.keys.normal_mode["<leader>tn"] = "<cmd>lua require('neotest').run.run()<CR>
 lvim.keys.normal_mode["<leader>tf"] = "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>"
 lvim.keys.normal_mode["<leader>td"] = "<cmd>lua require('neotest').run.run({strategy = 'dap'})<CR>"
 lvim.keys.normal_mode["<leader>to"] = "<cmd>lua require('neotest').summary.toggle()<cr>"
+
+

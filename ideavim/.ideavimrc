@@ -9,6 +9,8 @@
 " text scroll if you mouse-click near the start or end of the window.
 set scrolloff=5
 
+" use the system clipboard when yanking
+set clipboard=unnamed
 " Do incremental searching.
 set incsearch
 
