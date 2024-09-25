@@ -1,0 +1,24 @@
+{"description":"do a thing","entry":"20240925T023345Z","modified":"20240925T023345Z","status":"pending","uuid":"d1fd496f-a45a-42af-9192-9d90e61a70ec"}
+{"description":"do another thing","entry":"20240925T023349Z","modified":"20240925T023349Z","status":"pending","uuid":"1c156f98-7f4a-425c-997f-02fe2a85cd58"}
+{"cod":100,"description":"do special thing","duration":5,"entry":"20240925T023606Z","modified":"20240925T023606Z","status":"pending","uuid":"454ee56a-447d-4251-bbe1-1dcaf3a46a14"}
+{"cod":200,"description":"do another thingy","duration":2,"entry":"20240925T023640Z","modified":"20240925T023640Z","status":"pending","uuid":"23aae74d-6a90-4049-ae7c-5d0322164187"}
+{"description":"do a thing","end":"20240925T024041Z","entry":"20240925T023345Z","modified":"20240925T024041Z","status":"completed","uuid":"d1fd496f-a45a-42af-9192-9d90e61a70ec","wsjf":0.000000}
+{"description":"do another thing","end":"20240925T024042Z","entry":"20240925T023349Z","modified":"20240925T024042Z","status":"completed","uuid":"1c156f98-7f4a-425c-997f-02fe2a85cd58","wsjf":0.000000}
+{"cod":100.000000,"description":"do special thing","duration":5.000000,"end":"20240925T024056Z","entry":"20240925T023606Z","modified":"20240925T024056Z","status":"completed","uuid":"454ee56a-447d-4251-bbe1-1dcaf3a46a14","wsjf":20.000000}
+{"cod":200.000000,"description":"do another thingy","duration":2.000000,"end":"20240925T024057Z","entry":"20240925T023640Z","modified":"20240925T024057Z","status":"completed","uuid":"23aae74d-6a90-4049-ae7c-5d0322164187","wsjf":100.000000}
+{"cod":100,"description":"Implement feature X","duration":5,"entry":"20240925T024103Z","modified":"20240925T024103Z","status":"pending","uuid":"a0fc9929-010d-4f6c-bb15-f91cf32043db","wsjf":0}
+{"cod":200,"description":"Fix critical bug Y","duration":2,"entry":"20240925T024103Z","modified":"20240925T024103Z","status":"pending","uuid":"286519a4-8f95-41aa-9ea1-a75480c87ca0","wsjf":0}
+{"cod":500,"description":"do a big thing","duration":16,"entry":"20240925T024418Z","modified":"20240925T024418Z","status":"pending","uuid":"e4eaaf26-070c-47d4-8228-e8a1aedcbca3","wsjf":0}
+{"cod":300,"description":"big thang","duration":5,"entry":"20240925T024950Z","modified":"20240925T024950Z","status":"pending","uuid":"92e754b7-71ee-4cdd-8f3b-94b0ddc93b09","wsjf":0}
+{"cod":300,"description":"big thang","duration":5,"entry":"20240925T025009Z","modified":"20240925T025009Z","status":"pending","uuid":"8dd89596-3f6f-4614-98a0-c6ed5e756ba8","wsjf":0}
+{"cod":200,"description":"thingy","duration":1,"entry":"20240925T025059Z","modified":"20240925T025059Z","status":"pending","uuid":"6f7876b2-72db-4ad0-ae77-4aee5c40886a","wsjf":0}
+{"cod":200.000000,"description":"Implement feature X","duration":5.000000,"entry":"20240925T024103Z","modified":"20240925T025150Z","status":"pending","uuid":"a0fc9929-010d-4f6c-bb15-f91cf32043db","wsjf":40.000000}
+{"cod":200.000000,"description":"Implement feature X","duration":5.000000,"end":"20240925T025357Z","entry":"20240925T024103Z","modified":"20240925T025357Z","status":"completed","uuid":"a0fc9929-010d-4f6c-bb15-f91cf32043db","wsjf":40.000000}
+{"cod":200.000000,"description":"Fix critical bug Y","duration":2.000000,"end":"20240925T025359Z","entry":"20240925T024103Z","modified":"20240925T025359Z","status":"completed","uuid":"286519a4-8f95-41aa-9ea1-a75480c87ca0","wsjf":100.000000}
+{"cod":500.000000,"description":"do a big thing","duration":16.000000,"end":"20240925T025401Z","entry":"20240925T024418Z","modified":"20240925T025401Z","status":"completed","uuid":"e4eaaf26-070c-47d4-8228-e8a1aedcbca3","wsjf":31.250000}
+{"cod":300.000000,"description":"big thang","duration":5.000000,"end":"20240925T025403Z","entry":"20240925T024950Z","modified":"20240925T025403Z","status":"completed","uuid":"92e754b7-71ee-4cdd-8f3b-94b0ddc93b09","wsjf":60.000000}
+{"cod":300.000000,"description":"big thang","duration":5.000000,"end":"20240925T025406Z","entry":"20240925T025009Z","modified":"20240925T025406Z","status":"completed","uuid":"8dd89596-3f6f-4614-98a0-c6ed5e756ba8","wsjf":60.000000}
+{"cod":200.000000,"description":"thingy","duration":1.000000,"end":"20240925T025407Z","entry":"20240925T025059Z","modified":"20240925T025407Z","status":"completed","uuid":"6f7876b2-72db-4ad0-ae77-4aee5c40886a","wsjf":200.000000}
+{"cod":200.000000,"description":"1 do a thing","duration":5.000000,"entry":"20240925T025508Z","modified":"20240925T025508Z","status":"pending","uuid":"04876b8f-40c6-4b52-af02-e5c391f049d2","wsjf":40.000000}
+{"cod":500.000000,"description":"do a thingy","duration":1.000000,"entry":"20240925T025525Z","modified":"20240925T025525Z","status":"pending","uuid":"1b40f6ec-cd6d-42a1-bd20-6a6c5e5afb27","wsjf":500.000000}
+{"cod":100.000000,"description":"a big less important thing","duration":16.000000,"entry":"20240925T025553Z","modified":"20240925T025553Z","status":"pending","uuid":"618bd5cb-45b8-466a-af8b-48ea909a623b","wsjf":6.250000}
